@@ -1,3 +1,19 @@
+//sum of numbers
+class Sum
+{
+	public static void main(String args[])
+	{
+		int i,sum=0;
+		for(i=0;i<args.length;i++)
+		{
+			sum=sum+Integer.parseInt(args[i]);
+		}
+		System.out.println("sum is:"+sum);
+	}
+}
+
+
+
 javap java.io.BufferReader   //shows all pre defined functions in that package
 
 //simple intrest program using buffer class
