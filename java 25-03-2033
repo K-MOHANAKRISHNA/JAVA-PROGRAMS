@@ -1,0 +1,130 @@
+javap java.io.BufferReader   //shows all pre defined functions in that package
+
+//simple intrest program using buffer class
+/*import java.io.*;
+class Input
+{
+	public static void main(String args[])throws Exception
+	{
+	InputStreamReader isr=new InputStreamReader(System.in);
+	BufferedReader br=new BufferedReader(isr);
+	//BufferReader br=new BufferedReader(new InputStreamReader(System.in))
+	int P,T,R;
+	P=Integer.parseInt(br.readLine());
+	T=Integer.parseInt(br.readLine());
+	R=Integer.parseInt(br.readLine());
+
+	float I;
+	I=(P*T*R)/100;
+	System.out.println(I);
+	}
+}*/
+	
+
+//employee details
+/*import  java.io.*;
+class Input
+{
+	public static void main(String args[])throws Exception
+	{
+		int empid;
+		String ename,address;
+		float salary;
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		System.out.println("Ente id,name,address,salary:");
+		empid=Integer.parseInt(br.readLine());
+		ename=br.readLine();
+		address=br.readLine();
+		salary = Float.parseFloat(br.readLine());
+		System.out.println("employee information");
+		System.out.println("id="+empid+"\n name="+ename+"\n adrr="+address+"\n salary="+salary);
+	}
+}*/
+
+/*
+//qualifying racers
+
+import java.io.*;
+class Input
+{
+	public static void main(String args[])throws Exception
+	{
+		int p,q,r,s,t,sum=0;
+		float avg;
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		System.out.println("enter five racers spedd:");
+		p=Integer.parseInt(br.readLine());
+		q=Integer.parseInt(br.readLine());
+		r=Integer.parseInt(br.readLine());
+		s=Integer.parseInt(br.readLine());
+		t=Integer.parseInt(br.readLine());
+		sum=p+q+r+s+t;
+		avg=sum/5;
+		System.out.println("qualifying racers are:");
+		if(p>avg)
+		{
+			System.out.println("p");
+		}
+		if(q>avg)
+		{
+			System.out.println("q");
+		}
+		if(r>avg)
+		{
+			System.out.println("r");
+		}
+		if(s>avg)
+		{
+			System.out.println("s");
+		}
+		if(t>avg)
+		{
+			System.out.println("t");
+		}
+	}
+}
+		
+*/
+
+/*
+//using arrays
+
+import java.io.*;
+class Input
+{
+	public static void main(String args[])throws Exception
+	{
+		int arr[];
+		arr=new int[5];
+		int sum=0;
+		float avg;
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		System.out.println("enter five racers spedd:");
+		for(int i=0;i<5;i++)
+		{
+			System.out.println("Enter speed of racer:"+(i+1));
+			arr[i]=Integer.parseInt(br.readLine());
+			sum=sum+arr[i];
+		}
+		avg=sum/5;
+		for(int i=0;i<5;i++)
+		{
+			if(arr[i]>avg)
+			{
+				System.out.println("Racer"+(i+1)+"  Qualified");
+			}
+		}
+	}
+}
+
+		
+*/	
+
+		
+
+		
+
+		
