@@ -81,3 +81,39 @@ int main() {
 	return 0;
 }
   // } Driver Code Ends
+
+
+
+
+
+//nearest fibbonaci cpp approach code failed
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i1=0,i2=1,fib1=0,fib2,n,temp=0;
+    cin>>n;
+    for(int i=1;i<n;i++)
+    {
+        temp=fib1;
+        fib1=i1+i2;
+        i1=i2;
+        i2=fib1;
+        fib2=i1+i2;
+        if(fib1>n)
+        {
+            if((temp+fib1)/2==n)
+            {
+                cout<<fib1<<" "<<fib2;
+                break;
+            }
+            else
+            {
+            cout<<temp;
+            break;
+            }
+        }
+        
+    }
+}
