@@ -87,25 +87,27 @@ int main() {
 
 
 //nearest fibbonaci cpp approach code failed
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int i1=0,i2=1,fib1=0,fib2,n,temp=0;
+    int i1=0,i2=1,fib1=0,n,temp=0;
     cin>>n;
+    if(n==0)
+    {
+        cout<<n;
+    }
     for(int i=1;i<n;i++)
     {
         temp=fib1;
         fib1=i1+i2;
         i1=i2;
         i2=fib1;
-        fib2=i1+i2;
-        if(fib1>n)
+        if(n>temp && n<fib1)
         {
-            if((temp+fib1)/2==n)
+            if((temp+fib1)/2==n && (temp+fib1)%2==0)
             {
-                cout<<fib1<<" "<<fib2;
+                cout<<temp<<" "<<fib1;
                 break;
             }
             else
