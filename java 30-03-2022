@@ -1,1 +1,337 @@
+/*
+
+//narrowing ----------------->explicit typecasting (higher data type to lower datatype)
+
+class Typecasting
+{
+	public static void main(String args[])
+	{
+		double x=3.145d;
+		float y= (float) x;
+		System.out.println(x);
+		System.out.println(y);
+	}
+}*/
+
+
+/*
+
+//switch case example program
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		char ch;
+		ch=(char)br.read();
+		switch(ch)
+		{
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U':
+				System.out.println("Vowel");
+				break;
+			default:
+				System.out.println("constant");
+				break;
+		}
+	}
+}*/
+
+
+/*
+//2nd example program fow switch case
+//prob:  write a program to display colour name by taking input as colour code(rainbow colours)
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		char ch;
+		ch=(char)br.read();
+		switch(ch)
+		{
+
+			case 'V':
+				System.out.println("VIOLET");
+				break;
+			case 'I':
+			case 'i':
+				System.out.println("INDIGO");
+				break;
+			case 'B':
+				System.out.println("BLUE");
+				break;
+			case 'G':
+				System.out.println("GREEN");
+				break;
+			case 'Y':
+				System.out.println("YELLOW");
+				break;
+			case 'O':
+				System.out.println("ORANGE");
+				break;
+			case 'R':
+				System.out.println("RED");
+				break;
+			default:
+				System.out.println("INVALID CHARACTER");
+				break;
+		}
+	}
+}*/
+
+
+/*
+//switch case program
+//write a program to display search by taking the input as month(3,4,5-summer      6,7,8,9-Rainy      10,11,12,1,2-Winter
+
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		switch(n)
+		{
+			case 3:
+			case 4:
+			case 5:
+				System.out.println("Summer");
+				break;
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+				System.out.println("Rainy");
+				break;
+			case 1:
+			case 2:
+			case 10:
+			case 11:
+			case 12:
+				System.out.println("Winter");
+				break;
+			default:
+				System.out.println("Invalid month");
+				break;
+		}
+
+	}
+}
+
+*/
+
+//program to find the difference blw product of all the factors given number to sum of its its factors
+
+/*
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int s=0,p=1;
+		for(int i=1;i<=n;i++)
+		{
+			if(n%i==0)
+			{
+				s=s+i;
+				p=p*i;
+			}
+		}
+		System.out.println(p-s);
+	}
+}
+
+*/
+		
+//program to generate n fibbonacci series 
+/*
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int i1=0,i2=1,fib=0;
+		System.out.print(i1+" "+i2+" ");
+		for(int i=1;i<=n-2;i++)
+		{
+			fib=i1+i2;
+			System.out.print(fib+" ");
+			i1=i2;
+			i2=fib;
+		}
+	}
+}
+
+*/
+
+//print sum of even numbers in n fibbonacci series 
+/*
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int i1=0,i2=1,fib=0,s=0;
+		System.out.print(i1+" "+i2+" ");
+		for(int i=1;i<=n-2;i++)
+		{
+			fib=i1+i2;
+			if(fib%2==0)
+			{
+				s=s+fib;
+			}
+			System.out.print(fib+" ");
+			i1=i2;
+			i2=fib;
+		}
+		System.out.println("\n"+s);
+	}
+}
+*/
+
+
+//program to print even index sum
+/*
+import java.io.*;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int i1=0,i2=1,fib=0,s=1;
+		System.out.print(i1+" "+i2+" ");
+		for(int i=1;i<=n-2;i++)
+		{
+			fib=i1+i2;
+			if(i%2==0)
+			{
+				s=s+fib;
+			}
+			System.out.print(fib+" ");
+			i1=i2;
+			i2=fib;
+		}
+		System.out.println("\n"+s);
+	}
+}
+
+*/
+
+//program to find given number is armstrong or not
+/*
+import java.io.*;
+//import java.lang.Math;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int c1=0,t=0,s=0;
+		t=n;
+		while(n!=0)
+		{
+			c1=c1+1;
+			n=n/10;                         //easy method to count numbers  in a number
+		}                                    //count=(int)Math.log10(n)+1;    
+		n=t;
+		for(int i=1;i<=c1;i++)
+		{
+			s=s+(int) Math.pow(n%10,c1);
+			n=n/10;
+		}
+		if(s==t)
+		{
+			System.out.println("Armstrong number");
+		}
+		else
+		{
+			System.out.println("Not an armstrong number");
+		}
+	}
+}
+	
+
+*/
+
+//palindrome or not
+/*
+import java.io.*;
+//import java.lang.Math;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int rev=0,t=0;
+		t=n;
+		while(n!=0)
+		{
+			rev=rev*10+n%10;
+			n=n/10;
+		}
+		if(rev==t)
+			System.out.println(t+" is palindrome number");
+		else
+			System.out.println(t+" not a palindrome");
+	}
+}
+
+*/
+
+//program to find diff betwenn sum of odd numbers and sum of even numbers
+/*
+import java.io.*;
+//import java.lang.Math;
+class Typecasting
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int os=0,es=0,dig=0;
+		while(n!=0)
+		{
+			dig=n%10;
+			if(dig%2==0)
+				es=es+dig;
+			else
+				os=os+dig;
+			n=n/10;
+		}
+		if((es-os)>0)                             //Math.abs(a-b) //returns absolute value
+			System.out.println(es-os);
+		else
+			System.out.println(-(es-os));
+	}
+}
+
+*/
+
+
 
