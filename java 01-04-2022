@@ -1,0 +1,127 @@
+//prime numbers from 1 to 100
+/*
+import java.io.*;
+class First
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int c=0;
+		for(int i=2;i<=100;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				if(i%j==0)
+				{
+					c=c+1;
+				}
+			}
+			if(c==2)
+			{
+				System.out.println(i);
+			}
+			c=0;
+		}
+	}
+}*/
+
+
+//disarium number
+/*
+import java.io.*;
+class First
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n=Integer.parseInt(br.readLine());
+		int t,c=0,s=0;
+		t=n;
+		while(n!=0){
+			c=c+1;
+			n=n/10;
+		}
+		n=t;
+		for(int i=c;i>=1;i--)
+		{
+			s=s+(int)Math.pow(n%10,i);
+			n=n/10;
+		}
+		if(s==t){
+			System.out.println("Disarium Number");
+		}
+		else{
+			System.out.println("Not Disarium Number");
+		}
+	}
+}*/
+
+//how to create a class and object for it 
+/*
+class First
+{
+	public static void display(){               //we cant access other methods if they are non static methods //if you dont use static then u need to create object then we can access
+		System.out.println("Good Morning");  //static methods not need objects to access
+	}
+	public static void main(String args[])
+	{
+		display();
+		System.out.println("Welcome");
+	}
+}
+*/
+
+//without using static 
+/*
+class First
+{
+	public void display(){               
+		System.out.println("Good Morning");
+	}
+	public static void main(String args[])
+	{
+		First obj=new First();
+		obj.display();
+		System.out.println("Welcome");
+	}
+}*/
+
+
+//declaring variables in method and accessing them
+class First
+{
+	int x=10,y=20;
+	public void display(){               
+		System.out.println("Good Morning");
+	}
+	public static void main(String args[])
+	{
+		First obj=new First();
+		obj.display();
+		System.out.println("Welcome");
+		System.out.println(obj.x+" "+obj.y);
+	}
+}
+
+//string 
+ /*                                                                    //string the data which is in string cant be changed immutable
+                                                                     //string buffer if you want to perform some operations on string the go with string buffer
+import java.io.*;
+class First
+{
+	public static void main(String args[])
+	{
+		String s1=new String("Aditya");           //javap java.lang.String shows methods that are available in that package
+		s1.concat("Engineering");
+		System.out.println(s1);
+	
+		StringBuffer s2=new StringBuffer("Aditya");
+		s2.append("Engineering");
+		System.out.println(s2);
+	}
+}		*/
+
+
+		
