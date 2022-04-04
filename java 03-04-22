@@ -159,3 +159,180 @@ public class String_MethodsDemo
       
 	}
 }
+-------------------------------------------------------------------------------TODAY CLASS----------------------------------------------------------------------------
+//write a program which reads a line of text and then prints the  word number ,the number of characters in it.
+/*
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		String input;
+		input=br.readLine();
+		String words[]=input.split(" ");
+		for(int i=0;i<words.length;i++)
+		{
+			System.out.println("Words "+(i+1)+" count =" +words[i].length());
+		}
+	}
+}
+
+*/
+
+//write a program which takes two strings and checks whether the second string was embedded in first or nor
+/*
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		String inp1,inp2;
+		inp1=br.readLine();
+		inp2=br.readLine();
+		System.out.println(inp1.contains(inp2));
+	}
+}
+
+*/
+
+//write a program to read a line of text and then find the number of uppercase,lowercase,digits and symbols in it
+
+
+/*
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		String i1=br.readLine();
+		int upr=0,lwr=0,dig=0,sp=0;
+		for(int i=0;i<i1.length();i++)
+		{
+			char ch=i1.charAt(i);
+			if(ch>='A' && ch<='Z')
+			{
+				upr++;
+			}
+			else if(ch>='a' && ch<='z')
+			{
+				lwr++;
+			}
+			else if(ch>='0' && ch<='9')
+			{
+				dig++;
+			}
+			else
+			{
+				sp++;
+			}
+		}
+		System.out.println("the word contains "+upr+" upper caseletters \n"+lwr+" lowercase letters\n"+dig+" digits \n"+sp+" special characters ");
+	}
+}
+*/
+//second method to solve above problem
+/*
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		String i1=br.readLine();
+		int lwr=0,upr=0,dig=0,sp=0;
+		char ch[]=i1.toCharArray();
+		for (int i=0;i<ch.length;i++)
+		{
+			if(Character.isLowerCase(ch[i]))
+			{
+				lwr++;
+			}
+			else if(Character.isUpperCase(ch[i]))
+			{
+				upr++;
+			}
+			else if(Character.isDigit(ch[i]))
+			{
+				dig++;
+			}
+			else
+			{
+				sp++;
+			}
+		}
+		System.out.println("the word contains \n"+upr+" upper caseletters \n"+lwr+" lowercase letters\n"+dig+" digits \n"+sp+" special characters ");
+	}
+}
+
+
+		
+*/
+
+
+//write a program to remove characters in the given string except alphabets //remove special chars,digits
+/*
+
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		String i1=br.readLine();
+		char ch[]=i1.toCharArray();
+		for(int i=0;i<ch.length;i++)
+		{
+			if(Character.isLowerCase(ch[i]) || Character.isUpperCase(ch[i]))
+			{
+				System.out.print(ch[i]);
+			}
+			else
+			{
+				continue;
+			}
+		}
+	}
+}
+
+*/
+
+//print only digits  sum of digits
+/*
+import java.io.*;
+class Strings
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int s=0;
+
+		String i1=br.readLine();
+		char ch[]=i1.toCharArray();
+
+		for(int i=0;i<ch.length;i++)
+		{
+			if(Character.isDigit(ch[i]))
+			{
+				s=s+Integer.parseInt(ch[i]+"");
+				//s=s+(ch[i]-48);
+			}
+			else
+			{
+				continue;
+			}
+		}
+		System.out.println(s);
+
+	}
+}
+
+*/
