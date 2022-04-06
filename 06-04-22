@@ -228,3 +228,75 @@ even elements are:
 9
 
 
+//program
+
+import java.io.*;
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int x[],n,i,l,m,j=0,f=0;
+		float s=0f;
+		System.out.println("enter no.of elements you want to enter:");
+		n=Integer.parseInt(br.readLine());
+		x=new int[n];
+      	System.out.println("Enter the "+n+" elements :");
+		for(i=0;i<n;i++)
+		{
+			x[i]=Integer.parseInt(br.readLine());
+			s=s+x[i];
+		}
+		l=x[0];
+		m=x[0];
+		for(int ele:x)
+		{
+			if(ele<l)
+			{
+				l=ele;
+			}
+			else if(ele>m)
+			{
+				m=ele;
+			}
+		}
+		System.out.println("the salaries which are uniquely paid by the company to their employees:");
+	/*	for(i=0;i<n;i++)          
+		{
+			f=0;
+			for(j=0;j<n;j++)
+			{
+				if(x[i]==x[j])
+				{
+					f++;
+				}
+			}
+		if(f==1)
+		{
+			System.out.println(x[i]);
+		}	*/
+		
+		for(i=0;i<n;i++)
+		{
+			if(x[i]!=-1)
+			{
+				f=0;
+				for(j=i+1;j<n;j++)
+				{
+					if(x[i]==x[j])
+					{
+						f++;
+						x[j]=-1;
+					}
+				}
+			}
+			if(f==0)
+				System.out.println(x[i]);
+		}	 
+		System.out.println("maximum element in an array is"+ m +" lowest element in array is "+l);
+		System.out.println("the average of an array is:"+(s/n));
+
+	}
+}
+	
+output:
