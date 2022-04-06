@@ -1,0 +1,230 @@
+Array:-  array is a finite ordered collection of homogeneous elements.the main advantage of array is it improves code readability.
+disadvantages: 
+--->size of array is fixed...!!(we cant increase or decrease array size in runtime)
+--->it only stores homogeneous data
+--->insertion of an element or deletion in the middle of the array is difficult
+*by using COLLECTION we can solve these isssues
+
+syntax:
+        datatype arr[]=new datatype[size];
+ex:
+        int a[]=new int[10];
+example program:
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int a[]=new int[5];            //when we create an array then array is created and its values at indexes are 0 intially
+		System.out.println(a[0]);    //0
+		System.out.println(a);        //[I@5acf9800   here "I" means integer data type when it is double it shows "D"
+	}
+}
+
+
+output:
+0
+[I@5acf9800
+
+
+size:
+    char,byte,short,int
+    
+Intialization:
+    1-->COMPILE TIME:- at the time of declaring an array if you are assigned values to it is called compile time intialisation
+    ex: int x[]={10,20,30,40}
+    
+    ex prog:
+     
+     
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int a[]={10,20,30,40};
+		System.out.println(a[2]);    //returns an element which is at index 2
+		System.out.println(a.length);		//returns array length
+	}
+}
+
+ouput:
+30
+4
+
+//printing array elements
+
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int a[]={10,20,30,40};
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+output:
+10
+20
+30
+40
+
+FOR EACH LOOP 
+   syntax:
+    for(datatype ele:arrayname)
+    {
+    }
+    
+ ex prog:
+ //for each
+
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int a[]={10,20,30,40};
+		for(int ele:a)
+		{
+			System.out.println(ele);
+		}
+	}
+}
+
+
+   2--->RUNTIME INTILISATION:- 
+   
+ex prog:
+
+import java.io.*;
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int x[],n,i;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("enter no.of elements you want to enter:");
+		n=Integer.parseInt(br.readLine());
+		x=new int[n];
+      	System.out.println("Enter the "+n+" elements :");
+		for(i=0;i<n;i++)
+			x[i]=Integer.parseInt(br.readLine());
+      	System.out.println("u entered elements are:");
+		for(i=0;i<n;i++)
+			System.out.println(x[i]);
+	}
+}
+
+output:
+
+enter no.of elements you want to enter:
+4
+Enter the 4 elements :
+10
+20
+30
+40
+u entered elements are:
+10
+20
+30
+40
+
+
+//sum of array elements
+
+import java.io.*;
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		int x[],n,i,s=0;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("enter no.of elements you want to enter:");
+		n=Integer.parseInt(br.readLine());
+		x=new int[n];
+      	System.out.println("Enter the "+n+" elements :");
+		for(i=0;i<n;i++)
+		{
+			x[i]=Integer.parseInt(br.readLine());
+			s=s+x[i];
+		}
+      	System.out.println("u entered elements are:");
+		for(i=0;i<n;i++)
+			System.out.println(x[i]);
+		System.out.println("sum of array elements is"+s);
+	}
+}
+
+//printing even and odd elements in ar array and we need to store add elements in one array and even elements in another array
+import java.io.*;
+class Second
+{
+	public static void main(String args[])throws Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int x[],n,e[],o[],j=0,k=0,i;
+		System.out.println("enter no.of elements you want to enter:");
+		n=Integer.parseInt(br.readLine());
+		x=new int[n];
+		e=new int[n];
+		o=new int[n];	
+      	System.out.println("Enter the "+n+" elements :");
+		for(i=0;i<n;i++)
+		{
+			x[i]=Integer.parseInt(br.readLine());
+		}
+		for(i=0;i<n;i++)
+		{
+			if(x[i]%2==0)
+			{
+				e[j]=x[i];
+				j++;
+			}
+			else	
+			{
+				o[k]=x[i];
+				k++;
+			}
+		}
+		System.out.println("even elements are:");
+		for(i=0;i<j;i++)
+		{
+			System.out.println(e[i]);
+		}
+		System.out.println("even elements are:");
+		for( i=0;i<k;i++)
+		{
+			System.out.println(o[i]);
+		}
+	}
+}
+
+output:
+enter no.of elements you want to enter:
+10
+Enter the 10 elements :
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+even elements are:
+2
+4
+6
+8
+10
+even elements are:
+1
+3
+5
+7
+9
+
+
