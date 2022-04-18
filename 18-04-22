@@ -1,1 +1,181 @@
+//INHERITENCE
+//SINGLE  LEVEL INHERITENCE
+/*
+import java.io.*;
+class Parent1
+{
+	int x;
+	public void setx(int p)
+	{
+		x=p;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class Child1 extends Parent1
+{
+	int y;
+	public void sety(int q)
+	{
+		y=q;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+	
+class Third
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		Parent1 p=new Parent1();          //parent class obj with this we can access parent class metyhods(setx,getx)
+		p.setx(9);
+		System.out.println(p.getx());
+		Child1 c=new Child1();              //child class obj with this we can access both child class and parent class methods(setx,sety,getx.gety)
+		c.sety(10);
+		System.out.println(c.gety());
+		c.setx(11);
+		System.out.println(c.getx());
+		Parent1 q=new Child1();              //parent --> child instance it allows but only parent class methods can be accessed
+		q.setx(15);
+		System.out.print(q.getx());
+		//q.sety(20);                 //error 
+	}
+}
+*/
+
+//MULTILEVEL INHERITANCE
+/*
+import java.io.*;
+class Parent1
+{
+	int x;
+	public void setx(int p)
+	{
+		x=p;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class Parent2 extends Parent1
+{
+	int y;
+	public void sety(int q)
+	{
+		y=q;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+class Child1 extends Parent2
+{
+	int z;
+	public void setz(int r)
+	{
+		z=r;
+	}
+	public int getz()
+	{
+		return z;
+	}
+}
+class Third
+{
+	public static void main(String args[])throws Exception
+	{
+		Child1 c=new Child1();
+		c.setx(10);
+		c.sety(11);
+		c.setz(12);
+		System.out.println(c.getx());
+		System.out.println(c.gety());
+		System.out.println(c.getz());
+			
+	}
+}
+*/
+
+//HIERARICHAL
+/*
+class P
+{
+	int w;
+	public void setw(int p)
+	{
+		w=p;
+	}
+	public int getw()
+	{
+		return w;
+	}
+}
+class A extends P
+{
+	int x;
+	public void setx(int q)
+	{
+		x=q;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class B extends P
+{
+	int y;
+	public void sety(int r)
+	{
+		y=r;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+class C extends P
+{
+	int z;
+	public void setz(int s)
+	{
+		z=s;
+	}
+	public int getz()
+	{
+		return z;
+	}
+}
+class Third
+{
+	public static void main(String args[])throws Exception
+	{
+		A a=new A();
+		a.setw(1);
+		a.setx(2);
+		System.out.println("w="+(a.getw())+"x="+(a.getx())+"\n");
+		B b=new B();
+		b.setw(3);
+		b.sety(4);
+		System.out.println("w="+(b.getw())+"y="+(b.gety())+"\n");
+		C c=new C();
+		c.setw(5);
+		c.setz(6);
+		System.out.println("w="+(c.getw())+"z="+(c.getz())+"\n");
+	}
+}
+*/
+
+//
+super keyword
+Method Overriding :-  In inheritance both parent and child class have same method signature then it is called method overriding
+Method Signature  :-   a methpd name along with its return type and its parameters
 
