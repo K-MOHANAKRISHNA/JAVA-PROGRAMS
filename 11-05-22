@@ -1,0 +1,155 @@
+interface A
+{
+	void m1();
+	static void m2()
+	{
+		System.out.println("static method m2");
+	}
+}
+class Iface implements A
+{
+	public void m1()
+	{
+		System.out.println("M1 method");
+	}
+	public static void main(String args[])
+	{
+		A a=new Iface();
+		a.m1();
+		A.m2();
+	}
+}
+
+output:
+
+C:\Users\vinut>javac Iface.java
+
+C:\Users\vinut>java Iface
+M1 method
+static method m2
+
+
+/*
+import java.lang.Integer;
+import java.lang.*;
+import java.util.*;
+class Iface
+{
+	public static void main(String args[])
+	{
+		int x[]={10,20,40,30,5,25};
+		System.out.println("Before sorting:");
+		for(int ele:x)
+			System.out.println(ele);
+		Arrays.sort(x);
+		System.out.print("After sorting:");
+		for(int ele:x)
+			System.out.println(ele);
+	}
+}
+*/
+
+output:
+
+
+C:\Users\vinut>java Iface
+Before sorting:
+10
+20
+40
+30
+5
+25
+After sorting:5
+10
+20
+25
+30
+40
+
+//stored in notepad Iface.java
+
+package aec.cse.it;
+public class Iface
+{
+	public void CSE()
+	{
+		System.out.println("CSE Studemts");
+	}
+	public void IT()
+	{
+		System.out.println("IT Students");
+	}
+}
+//to save package
+
+C:\Users\vinut>javac -d C:\Users\vinut Iface.java
+
+
+//stored in Pprog.java
+
+import aec.cse.it.Iface;
+class Pprog
+{
+	public static void main(String args[])
+	{
+		Iface i=new Iface();
+		i.CSE();
+		i.IT();
+	}
+}
+
+
+output:
+
+
+C:\Users\vinut>javac Pprog.java
+
+C:\Users\vinut>java Pprog
+CSE Studemts
+IT Students
+
+//stored in notepad Arithmetic.java
+package aec.math;
+public class Arithmetic
+{
+    public int add(int x,int y)
+    
+{
+     return x+y;
+}
+public int sub(int x,int y)
+{
+    return x-y;
+}
+public int mul(int x,int y)
+{
+   return x*y;
+}
+public int div(int x,int y)
+{
+    return x/y;
+}
+}
+
+
+C:\Users\vinut>javac -d C:\Users\vinut Arithmetic.java
+//stored in Pprog.java
+
+
+import aec.math.Arithmetic;
+class Pprog
+{
+	public static void main(String args[])
+	{
+		Arithmetic i=new Arithmetic();
+		System.out.println(i.add(2,3));
+	}
+}
+
+
+OUTPUT:
+C:\Users\vinut>javac Pprog.java
+
+C:\Users\vinut>java Pprog
+5
